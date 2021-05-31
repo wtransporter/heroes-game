@@ -1,0 +1,8 @@
+{
+  "name": "vlada/heroes",
+  "autoload": {
+    "psr-4": {
+      "app\\": "./"
+    }
+  }
+}

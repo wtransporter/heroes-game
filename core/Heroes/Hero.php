@@ -4,7 +4,6 @@ namespace app\core\Heroes;
 
 use app\core\Gamer;
 use app\core\exceptions\WeaponNotAllowedException;
-use app\core\logger\FileLogger;
 use app\core\monsters\Monster;
 
 abstract class Hero extends Gamer
@@ -42,6 +41,6 @@ abstract class Hero extends Gamer
     {
         $damage = $this->hitMonster();
         $monster->reduceHealth($damage);
-        FileLogger::log("Hero attacked monster with $damage");
+        app("logger")->log("Hero attacked monster with $damage");
     }
 }

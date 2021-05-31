@@ -2,9 +2,11 @@
 
 namespace app\core\logger;
 
-class FileLogger
+use app\core\logger\LoggerInterface;
+
+class FileLogger implements LoggerInterface
 {
-    public static function log(string $message)
+    public function log(string $message)
     {
         $file = fopen("log.txt", "a+");
         fwrite($file, $message . PHP_EOL);

@@ -4,7 +4,6 @@ namespace app\core\monsters;
 
 use app\core\Gamer;
 use app\core\heroes\Hero;
-use app\core\logger\FileLogger;
 
 abstract class Monster extends Gamer
 {
@@ -16,7 +15,7 @@ abstract class Monster extends Gamer
     {
         $damage = $this->hitHero();
         $hero->reduceHealth($damage);
-        FileLogger::log("Monster attacked hero with $damage");
+        app("logger")->log("Monster attacked hero with $damage");
     }
 
     protected function hitHero(): int

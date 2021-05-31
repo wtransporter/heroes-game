@@ -31,17 +31,17 @@ class Game
             $randomNumber = rand(0, 100);
             
             if ($this->hero->getHealth() <= 0 && $this->monster->getHealth() <= 0) {
-                FileLogger::log("No winner. It is draw");
+                app("logger")->log("No winner. It is draw");
                 return;
             }
 
             if ($this->hero->getHealth() <= 0 && $this->monster->getHealth() > 0) {
-                FileLogger::log("The monster won the battle with the hero");
+                app("logger")->log("The monster won the battle with the hero");
                 return;
             }
             
             if ($this->hero->getHealth() > 0 && $this->monster->getHealth() <= 0) {
-                FileLogger::log("The hero won the battle with the monster");
+                app("logger")->log("The hero won the battle with the monster");
                 return;
             }
 

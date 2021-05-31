@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core\heroes;
+namespace app\core\Heroes;
 
 use app\core\Gamer;
 use app\core\exceptions\WeaponNotAllowedException;

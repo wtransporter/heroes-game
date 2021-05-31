@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core\heroes;
+namespace app\core\Heroes;
 
 class Wizard extends Hero
 {

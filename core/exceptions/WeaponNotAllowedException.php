@@ -4,6 +4,7 @@ namespace app\core\exceptions;
 
 class WeaponNotAllowedException extends \Exception
 {
-    public $message = 'This Weapon is not allowed';
-    public $code = 422;
+    public function __construct($message, $code = 422, \Throwable $previous = null) {
+        parent::__construct($message, $code, $previous);
+    }
 }
